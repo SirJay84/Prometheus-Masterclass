@@ -23,13 +23,13 @@ groups:
       expr: rate(request_processing_seconds_sum [1m])/ rate (request_processing_seconds_count [1m])
     
     - alert: App_Latency_Above5
-      expr: job:Summary_Instrumenation_app_processing_request_seconds:rate_1m >=5
+      expr: job:Summary_Instrumenation_app_processing_request_seconds:rate_1m >= 5
       for: 2m
       labels:
         severity: Critical
 
     - alert: App_Latency_Above2_Less5
-      expr: 2=< job:Summary_Instrumenation_app_processing_request_seconds:rate_1m <=5
+      expr: 2 < job:Summary_Instrumenation_app_processing_request_seconds:rate_1m < 5
       for: 2m
       labels:
         severity: Warning
