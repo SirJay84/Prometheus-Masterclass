@@ -3,7 +3,7 @@ route:
 receivers:
   - name: admin
     email_config:
-      - to: 'jimbotela@icloud.com'
+      - to: 'imaina562@gmail.com'
         from: 'jimbotela@gmail.com'
         smarthost: smtp.gmail.com:587
         auth_username: 'jimbotela@gmail.com'
