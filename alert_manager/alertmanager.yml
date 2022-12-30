@@ -1,12 +1,12 @@
 route:
   receiver: admin
 receivers:
-  - name: admin
-    email_config:
-      - to: 'mbotelaj84@gmail.com'
-        from: 'jimbotela@gmail.com'
-        smarthost: smtp.gmail.com:587
-        auth_username: 'jimbotela@gmail.com'
-        auth_identity: 'jimbotela@gmail.com'
-        auth_password: '16-digit password'
+- name: admin
+  email_configs:
+  - to: 'mbotelaj84@gmail.com'
+    from: 'jimbotela@gmail.com'
+    smarthost: smtp.gmail.com:587
+    auth_username: 'jimbotela@gmail.com'
+    auth_identity: 'jimbotela@gmail.com'
+    auth_password: '16-digit password'
         
