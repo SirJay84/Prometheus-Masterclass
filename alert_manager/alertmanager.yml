@@ -1,5 +1,6 @@
 route:
   receiver: admin
+
 receivers:
 - name: admin
   email_configs:
