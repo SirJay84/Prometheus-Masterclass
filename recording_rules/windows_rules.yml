@@ -14,7 +14,7 @@ groups:
         description: "WMI Exporter is down for more than 2 minutes"
     
     - record: job:wmi_physical_memory_bytes:free
-      expr: (wmi_os_physical memory_free_bytes / wmi_cs_physical_memory_bytes) * 100
+      expr: (wmi_os_physical_memory_free_bytes / wmi_cs_physical_memory_bytes) * 100
 
     - alert: WindowsMemoryUsageAbove60%
       expr: 60 < (100 - job:node_memory_Mem_bytes:available) < 75
@@ -50,7 +50,7 @@ groups:
         description: "CPU load for instance {{ $labels.instance }} has reached {{ $value }} %"
 
     - alert: WindowsDiskSpaceUsageAbove80%
-      expr: 100 - ((wmi_logical_disk_free_bytes / (wmi_logical_disk_size_bytes) * 100) > 80
+      expr: 100 - ((wmi_logical_disk_free_bytes) / (wmi_logical_disk_size_bytes) * 100) > 80
       for: 2m
       labels:
         severity: critical
