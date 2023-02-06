@@ -11,7 +11,7 @@ route:
   routes:
     # Route for OS Alerts
     - match_re:
-        app_type:(linux|windows)
+        app_type: (linux|windows)
       # Fallback Receiver for OS Alerts
       receiver: abc_sol-admin
     
@@ -42,7 +42,7 @@ route:
 
     # Route for Application Alerts
     - match_re:
-        app_type:(python|go)
+        app_type: (python|go)
       # Fallback Receiver for App Alerts
       receiver: xyz_sol-admin
       routes:
