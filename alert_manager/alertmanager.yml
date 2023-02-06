@@ -19,7 +19,7 @@ route:
         - match: 
             app_type: linux
           # Fallback Receiver for Linux Alerts
-          receiver: abc_sol_linux_admin
+          receiver: abc_sol_linux-admin
           routes:
             - match:
                 severity: critical
@@ -31,7 +31,7 @@ route:
         - match: 
             app_type: windows
           # Fallback Receiver for Windows Alerts
-          receiver: abc_sol_windows_admin
+          receiver: abc_sol_windows-admin
           routes:
             - match:
                 severity: critical
